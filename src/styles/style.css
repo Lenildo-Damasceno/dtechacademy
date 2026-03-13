@@ -1,0 +1,181 @@
+/* ============================================================
+   IVONA TECH — Estilos Globais
+   ============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background: #f5f5f5;
+}
+
+/* ============================================================
+   CONTAINER
+   ============================================================ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================================
+   TOP BAR — Contatos e Redes Sociais
+   ============================================================ */
+.top-bar {
+    background-color: #0d0d1a;
+    color: #ccc;
+    padding: 8px 0;
+    font-size: 0.82rem;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.top-contact,
+.top-social {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.top-contact a,
+.top-social a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.top-contact a:hover,
+.top-social a:hover {
+    color: #64ffda;
+}
+
+.top-social a {
+    font-weight: 600;
+    color: #64ffda;
+}
+
+.top-social a:hover {
+    color: #fff;
+}
+
+/* ============================================================
+   HEADER PRINCIPAL — Logo e Navegação
+   ============================================================ */
+.header-principal {
+    background: #16213e;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+}
+
+/* Marca / Logo */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.institution-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+}
+
+.institution-tagline {
+    font-size: 0.78rem;
+    margin: 0;
+    color: #a8b2d8;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================================
+   NAVEGAÇÃO PRINCIPAL
+   ============================================================ */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.92rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a.active {
+    color: #64ffda;
+    font-weight: 600;
+    background: rgba(100, 255, 218, 0.08);
+}
+
+/* ============================================================
+   BANNERS DE PÁGINA
+   ============================================================ */
+.page-banner {
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.page-banner p {
+    font-size: 1rem;
+    color: #a8b2d8;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+    background: #0d0d1a;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+}
