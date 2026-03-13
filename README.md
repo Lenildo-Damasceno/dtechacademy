@@ -94,6 +94,14 @@ CEP: 59065-000
 - Telefone: validação de 10 ou 11 dígitos
 - Todos os campos obrigatórios validados
 
+## 👥 Contribuindo com o Projeto
+
+Quer adicionar um colaborador ou contribuir com o projeto? Consulte o guia [CONTRIBUTING.md](CONTRIBUTING.md) para instruções detalhadas sobre como:
+
+- Adicionar um amigo como colaborador no GitHub
+- Clonar o repositório e criar branches
+- Enviar alterações via Pull Request
+
 ## 👨‍💻 Autor
 
 Desenvolvido para Ivona Tech - Educação em Tecnologia
