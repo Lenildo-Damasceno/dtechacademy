@@ -1,7 +1,3 @@
-/* ============================================================
-   IVONA TECH — Estilos Globais
-   ============================================================ */
-
 * {
     margin: 0;
     padding: 0;
@@ -9,173 +5,101 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
-    background: #f5f5f5;
-}
-
-/* ============================================================
-   CONTAINER
-   ============================================================ */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* ============================================================
-   TOP BAR — Contatos e Redes Sociais
-   ============================================================ */
-.top-bar {
-    background-color: #0d0d1a;
-    color: #ccc;
-    padding: 8px 0;
-    font-size: 0.82rem;
-}
-
-.top-bar-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.top-contact,
-.top-social {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    flex-wrap: wrap;
-}
-
-.top-contact a,
-.top-social a {
-    color: #aaa;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.top-contact a:hover,
-.top-social a:hover {
-    color: #64ffda;
-}
-
-.top-social a {
-    font-weight: 600;
-    color: #64ffda;
-}
-
-.top-social a:hover {
-    color: #fff;
-}
-
-/* ============================================================
-   HEADER PRINCIPAL — Logo e Navegação
-   ============================================================ */
-.header-principal {
-    background: #16213e;
-    color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 0;
-}
-
-/* Marca / Logo */
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-}
-
-.logo-img {
-    width: 52px;
-    height: 52px;
-    object-fit: contain;
-}
-
-.institution-name {
-    font-size: 1.6rem;
-    font-weight: 700;
+    background: #9c9898;
     margin: 0;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+.promo-banner {
+  background: linear-gradient(90deg, #00dffc 0%, #088c19 100%); /* Verde promocional */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.matricule-se-btn {
+  background-color: #088c19; /* Verde DIO */
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.matricule-se-btn:hover {
+  background-color: #066f14; /* Verde mais escuro no hover */
+}
+
+
+.header {
+    background: #b800;
     color: #fff;
+    padding: 20px;
 }
 
-.institution-tagline {
-    font-size: 0.78rem;
-    margin: 0;
-    color: #a8b2d8;
-    letter-spacing: 0.5px;
+.logo {
+    float: left;
+    margin-right: 1rem;
+    width: 100px;
 }
-
-/* ============================================================
-   NAVEGAÇÃO PRINCIPAL
-   ============================================================ */
-.nav-links {
+nav {
+    padding: 18px;
+}
+nav ul{
+    display: flex;
     list-style: none;
-    display: flex;
-    gap: 6px;
-    margin: 0;
     padding: 0;
 }
-
-.nav-links a {
-    color: #ccc;
+nav a{
+    color: #fff;
     text-decoration: none;
-    font-size: 0.92rem;
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: color 0.2s, background 0.2s;
-    white-space: nowrap;
+    padding: 0.5rem 1rem;
+}
+.header h1 {
+    color: #7ff815; /* verde limão */
 }
 
-.nav-links a:hover {
+.header a {
     color: #fff;
-    background: rgba(255, 255, 255, 0.1);
+    margin-right: 10px;
+    text-decoration: none;
 }
 
-.nav-links a.active {
-    color: #64ffda;
-    font-weight: 600;
-    background: rgba(100, 255, 218, 0.08);
+.header a:hover {
+    color: #7ff815; /* amarelo */
 }
 
-/* ============================================================
-   BANNERS DE PÁGINA
-   ============================================================ */
-.page-banner {
-    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
-    color: #fff;
-    padding: 60px 0;
+nav {
     text-align: center;
 }
 
-.page-banner h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+nav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
 }
-
-.page-banner p {
-    font-size: 1rem;
-    color: #a8b2d8;
-}
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
 footer {
     background: #0d0d1a;
-    color: #aaa;
-    text-align: center;
+    color: #7ff815;
     padding: 20px;
     font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+footer a {
+    color: #7ff815;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
