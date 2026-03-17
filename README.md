@@ -1,10 +1,9 @@
-# 🎓 Ivona Tech - Plataforma de Cursos de Computação
-
-Site institucional da Ivona Tech, uma plataforma dedicada ao ensino de computação e tecnologia em Natal/RN.
+# 🎓 D Tech Academy - Plataforma de Cursos 
+Site institucional , uma plataforma dedicada ao ensino de computação e tecnologia em Natal/RN.
 
 ## 📋 Sobre o Projeto
 
-A Ivona Tech oferece cursos na área de tecnologia, com foco em desenvolvimento web, programação, banco de dados, segurança da informação e DevOps.
+A D Tech oferece cursos na área de tecnologia, com foco em desenvolvimento web, programação, banco de dados, segurança da informação e DevOps.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -67,7 +66,6 @@ CEP: 59065-000
 **Contato:**
 - Telefone: (84) 3234-5678
 - WhatsApp: (84) 99876-5432
-- Email: contato@ivonatech.com.br
 
 ## 🕐 Horário de Atendimento
 
@@ -100,4 +98,4 @@ Desenvolvido para Ivona Tech - Educação em Tecnologia
 
 ## 📄 Licença
 
-© 2024 Ivona Tech. Todos os direitos reservados.
+© 2026 D Tech. Todos os direitos reservados.
