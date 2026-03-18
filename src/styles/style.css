@@ -6,23 +6,25 @@
 
 body {
     font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    background: #9c9898;
+    color: #0604;
+    background: #060429;
     margin: 0;
     min-height: 100vh;
     line-height: 1.6;
 }
 .promo-banner {
-  background: linear-gradient(90deg, #00dffc 0%, #088c19 100%); /* Verde promocional */
-  color: white;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: linear-gradient(90deg, #19f575 0%, #19f575 100%); /* Verde promocional */
+  color: rgb(0, 0, 0);
   padding: 1rem;
   text-align: center;
   border-radius: 0 0 1rem 1rem;
 }
 
 .matricule-se-btn {
-  background-color: #088c19; /* Verde DIO */
-  color: white;
+  background-color: #cb15ce; /* Verde DIO */
+  color: rgb(252, 252, 252);
   padding: 1rem 2rem;
   border: none;
   border-radius: 0.5rem;
@@ -36,28 +38,48 @@ body {
 
 
 .header {
-    background: #b800;
+    background: transparent; /* header sem cor para permitir .header-row em preto */
     color: #fff;
-    padding: 20px;
+    padding: 0 0 20px; /* ajuste conforme necessário */
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    background: #000;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    position: relative;
 }
 
 .logo {
-    float: left;
-    margin-right: 1rem;
-    width: 100px;
+    width: 300px;
+    height: 50px;
+    display: block;
+
 }
+
 nav {
-    padding: 18px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
-nav ul{
-    display: flex;
+
+nav ul {
     list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
     padding: 0;
+    margin: 0;
 }
 nav a{
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
+    font-size: 1.00rem;
+    font-weight: 500;
 }
 .header h1 {
     color: #7ff815; /* verde limão */
@@ -72,16 +94,28 @@ nav a{
 .header a:hover {
     color: #7ff815; /* amarelo */
 }
-
-nav {
-    text-align: center;
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 18px 20px;
+    width: 100%;
 }
 
-nav ul {
-    list-style: none;
-    display: inline-flex;
-    gap: 20px;
+/* responsivo: empilha no celular */
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }
+
+main {
+    padding: 20px;
+}
+
 footer {
     background: #0d0d1a;
     color: #7ff815;
