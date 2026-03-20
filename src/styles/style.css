@@ -18,6 +18,8 @@ body {
     background: #060429;        /* Cor de fundo da página: azul escuro */
     min-height: 100vh;          /* Garante que a página ocupe no mínimo 100% da altura da tela */
     line-height: 1.6;           /* Espaçamento entre linhas para melhor leitura */
+    padding-top: 160px;         /* Empurra todo o conteúdo para baixo do header fixo (banner + header-row) */
+    padding-bottom: 70px;        /* Empurra o conteúdo para cima do footer fixo */
 }
 
 /* ================================
@@ -25,8 +27,6 @@ body {
    Faixa verde no topo do header
    ================================ */
 .promo-banner {
-    width: 100vw;                       /* Ocupa 100% da largura da tela */
-    margin-left: calc(50% - 50vw);      /* Força largura total mesmo dentro de um container */
     background: #19f575;                /* Cor de fundo verde */
     color: #000;                        /* Cor do texto: preto */
     padding: 1rem;                      /* Espaçamento interno */
@@ -41,7 +41,7 @@ body {
 .matricule-se-btn {
     background-color: #cb15ce;  /* Cor de fundo: roxo/magenta */
     color: #fff;                /* Cor do texto: branco */
-    padding: 1rem 2rem;         /* Espaçamento interno: vertical e horizontal */
+    padding: 0.5rem 1.5rem;     /* Espaçamento interno: vertical e horizontal */
     border: none;               /* Remove borda padrão do botão */
     border-radius: 0.5rem;      /* Arredonda os cantos */
     font-weight: bold;          /* Texto em negrito */
@@ -56,12 +56,16 @@ body {
 
 /* ================================
    HEADER
-   Container principal do cabeçalho
+   Fixo no topo — permanece visível ao rolar a página
    ================================ */
 .header {
-    background: transparent;    /* Fundo transparente, a cor vem do .header-row */
+    position: fixed;            /* Fixa o header no topo da tela */
+    top: 0;                     /* Posiciona no topo */
+    left: 0;                    /* Alinha à esquerda */
+    width: 100%;                /* Ocupa toda a largura */
+    z-index: 1000;              /* Fica acima de todos os outros elementos */
+    background: #000;           /* Fundo preto para cobrir o conteúdo ao rolar */
     color: #fff;                /* Cor do texto: branco */
-    padding: 0 0 20px;          /* Espaçamento apenas na parte inferior */
 }
 
 /* ================================
@@ -74,8 +78,6 @@ body {
     align-items: center;                    /* Alinha itens verticalmente ao centro */
     padding: 14px 20px;                     /* Espaçamento interno */
     background: #000;                       /* Fundo preto */
-    width: 100vw;                           /* Ocupa toda a largura da tela */
-    margin-left: calc(50% - 50vw);          /* Garante largura total mesmo dentro de container */
 }
 
 /* ================================
@@ -123,17 +125,19 @@ nav a:hover {
 
 /* ================================
    HEADER-CONTENT
-   Container auxiliar do header
-   (usado para espelhar a logo no grid)
+   Terceira coluna do grid — espelha a logo
+   para manter o nav centralizado
    ================================ */
 .header-content {
     display: flex;          /* Usa flexbox */
     align-items: center;    /* Alinha itens verticalmente ao centro */
+    width: 100px;           /* Mesma largura da logo para equilibrar o grid */
 }
 
 /* ================================
    MAIN
    Área de conteúdo principal
+   Tem padding-top para não ficar atrás do header fixo
    ================================ */
 main {
     padding: 20px;  /* Espaçamento interno */
@@ -142,7 +146,7 @@ main {
 
 /* ================================
    FOOTER
-   Rodapé da página
+   Fixo na parte inferior da página
    ================================ */
 footer {
     background: #0d0d1a;            /* Fundo azul muito escuro */
@@ -154,6 +158,11 @@ footer {
     align-items: center;            /* Alinha itens verticalmente ao centro */
     flex-wrap: wrap;                /* Quebra linha em telas pequenas */
     gap: 10px;                      /* Espaço entre itens ao quebrar linha */
+    position: fixed;                /* Fixa o footer na parte inferior */
+    bottom: 0;                      /* Cola no rodapé da tela */
+    left: 0;                        /* Alinha à esquerda */
+    right: 0;                       /* Alinha à direita */
+    z-index: 1000;                  /* Fica acima do conteúdo ao rolar */
 }
 
 /* Links do rodapé */
@@ -170,7 +179,7 @@ footer a:hover {
 
 /* ================================
    RESPONSIVO
-   Ajustes para telas menores (tablets e celulares)
+   Ajustes para tablets e celulares
    ================================ */
 @media (max-width: 768px) {
 
@@ -194,28 +203,9 @@ footer a:hover {
         font-size: 0.8rem;
         padding: 0.4rem 0.5rem;
     }
-}
-
-@media (max-width:768px) {
-
-    /* Ajustes adicionais para telas pequenas */
-    .header-row {
-        flex-direction: column; /* Empilha logo e nav verticalmente */
-        align-items: flex-start; /* Alinha à esquerda */
-    }
 
     /* Reduz o tamanho da logo */
     .logo {
         width: 80px;
-    }
-
-    /* Reduz o tamanho da fonte do título */
-    main h2 {
-        font-size: 1.5rem;
-    }
-
-    /* Reduz o tamanho da fonte dos artigos */
-    main article h3 {
-        font-size: 1.2rem;
     }
 }

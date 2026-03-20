@@ -1,0 +1,36 @@
+/* ================================
+   LOCALIZACAO.CSS
+   Estilos específicos da página de localização
+   Importa os estilos base do style.css
+   ================================ */
+@import url('../styles/style.css');
+
+/* ================================
+   SEÇÕES
+   Espaçamento entre as seções
+   ================================ */
+section {
+    margin-bottom: 2rem; /* Espaço abaixo de cada seção */
+}
+
+/* ================================
+   IFRAME DO MAPA
+   Garante que o mapa ocupe toda a largura
+   ================================ */
+iframe {
+    display: block;         /* Remove espaço extra abaixo do iframe */
+    width: 100%;            /* Ocupa toda a largura disponível */
+    border-radius: 0.5rem;  /* Cantos arredondados */
+}
+
+/* ================================
+   ENDEREÇO
+   Estilo do bloco de endereço
+   ================================ */
+address {
+    font-style: normal;             /* Remove itálico padrão do address */
+    background: rgba(255,255,255,0.05); /* Fundo levemente claro */
+    padding: 1rem;                  /* Espaçamento interno */
+    border-radius: 0.5rem;          /* Cantos arredondados */
+    margin: 1rem 0;                 /* Espaço acima e abaixo */
+}

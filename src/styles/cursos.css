@@ -1,0 +1,32 @@
+/* ================================
+   CURSOS.CSS
+   Estilos específicos da página de cursos
+   Importa os estilos base do style.css
+   ================================ */
+@import url('../styles/style.css');
+
+/* ================================
+   SEÇÕES
+   Espaçamento entre as seções
+   ================================ */
+section {
+    margin-bottom: 2rem; /* Espaço abaixo de cada seção */
+}
+
+/* ================================
+   ARTIGOS DE CURSO
+   Card de cada curso listado
+   ================================ */
+article {
+    background: rgba(255,255,255,0.05); /* Fundo levemente claro sobre o fundo escuro */
+    border-left: 4px solid #7ff815;     /* Borda esquerda verde limão como destaque */
+    padding: 1rem;                      /* Espaçamento interno */
+    margin-bottom: 1rem;                /* Espaço entre os cards */
+    border-radius: 0.5rem;              /* Cantos arredondados */
+}
+
+/* Título de cada curso */
+article h3 {
+    color: #7ff815;         /* Cor verde limão para o título */
+    margin-bottom: 0.5rem;  /* Espaço abaixo do título */
+}

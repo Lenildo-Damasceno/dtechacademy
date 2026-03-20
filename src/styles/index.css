@@ -1,0 +1,51 @@
+/* ================================
+   INDEX.CSS
+   Estilos específicos da página inicial (index.html)
+   Importa os estilos base do style.css
+   ================================ */
+@import url('../styles/style.css');
+
+/* ================================
+   TABELAS
+   Estilo das tabelas de disciplinas
+   ================================ */
+table {
+    width: 10%;                /* Ocupa toda a largura disponível */
+    border-collapse: collapse;  /* Remove espaço duplo entre bordas */
+    margin-top: 10px;           /* Espaço acima da tabela */
+}
+
+/* Células do cabeçalho e do corpo da tabela */
+th, td {
+    border: 1px solid #7ff815; /* Borda verde limão */
+    padding: 10px;              /* Espaçamento interno das células */
+    text-align: left;           /* Alinha o texto à esquerda */
+}
+
+/* Cabeçalho da tabela */
+th {
+    background: #0d0d1a;        /* Fundo escuro para destacar o cabeçalho */
+    color: #7ff815;             /* Texto verde limão */
+}
+
+/* Linhas pares do corpo da tabela — zebrado para facilitar leitura */
+tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.05); /* Fundo levemente mais claro */
+}
+
+/* ================================
+   VÍDEO
+   Centraliza o vídeo de introdução
+   ================================ */
+video {
+    display: block;     /* Remove espaço extra abaixo do vídeo */
+    margin: 0 auto;     /* Centraliza horizontalmente */
+}
+
+/* ================================
+   SEÇÕES
+   Espaçamento entre as seções do conteúdo
+   ================================ */
+section {
+    margin-bottom: 2rem; /* Espaço abaixo de cada seção */
+}
