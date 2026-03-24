@@ -49,3 +49,50 @@ video {
 section {
     margin-bottom: 2rem; /* Espaço abaixo de cada seção */
 }
+
+p {
+    margin-bottom: 1rem; /* Espaço abaixo de cada parágrafo */
+}
+
+/* ================================
+   DEPOIMENTOS
+   Estilos para a seção de Depoimentos
+   ================================ */
+.depoimentos {
+    max-width: 1080px;
+    margin: 2rem auto;
+    background: rgba(255,255,255,0.03);
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    color: #fff;
+}
+.depoimentos h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #7ff815;
+}
+.depoimentos article {
+    background: rgba(0,0,0,0.2);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    margin-top: 0.75rem;
+}
+.depoimentos h5 {
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+}
+.depoimentos p {
+    color: #e9e9e9;
+    line-height: 1.5;
+    margin: 0;
+}
+@media (max-width: 600px) {
+  .depoimentos { padding: 1rem; margin: 1rem; }
+  .depoimentos h2 { font-size: 1.25rem; }
+}
+#par1 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: blue;
+}

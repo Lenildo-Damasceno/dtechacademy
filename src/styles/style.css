@@ -76,18 +76,20 @@ body {
     display: grid;                          /* Layout em grid */
     grid-template-columns: auto 1fr auto;   /* 3 colunas: logo | nav centralizado | espaço espelho */
     align-items: center;                    /* Alinha itens verticalmente ao centro */
-    padding: 14px 20px;                     /* Espaçamento interno */
+    padding: 16px 10px;                     /* Espaçamento interno — aumente o valor para afastar logo do nav */
     background: #000;                       /* Fundo preto */
 }
 
 /* ================================
    LOGO
    Imagem da logo no header
+   Para aumentar o tamanho, altere o valor de width abaixo
    ================================ */
 .logo {
-    width: 100px;       /* Largura da logo */
-    height: auto;       /* Altura proporcional à largura */
-    display: block;     /* Remove espaço extra abaixo da imagem */
+    width: 120px;           /* Largura da logo — aumente este valor para deixar maior */
+    height: auto;           /* Altura proporcional à largura */
+    display: block;         /* Remove espaço extra abaixo da imagem */
+    margin-left: 80px;      /* Empurra a logo para o centro — aumente para mover mais */
 }
 
 /* ================================
@@ -109,6 +111,7 @@ nav ul {
     margin: 0;              /* Remove margem padrão */
 }
 
+
 /* Links do menu */
 nav a {
     color: #fff;                /* Cor do texto: branco */
@@ -117,10 +120,20 @@ nav a {
     font-size: 1rem;            /* Tamanho da fonte */
     font-weight: 500;           /* Peso da fonte: semi-negrito */
 }
+nav :is(a, button) {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
+nav :is(a, button):hover {
+    color: #7ff815;
+}
 /* Efeito ao passar o mouse nos links do menu */
-nav a:hover {
-    color: #7ff815;     /* Muda para verde limão no hover */
+
+nav a:active {
+    color: #1b08ed;
+    text-decoration: underline;
 }
 
 /* ================================
@@ -204,8 +217,22 @@ footer a:hover {
         padding: 0.4rem 0.5rem;
     }
 
+
+    /* Estilo do link ativo */
+    /* nav a.ativo {
+    color: #7ff815;
+    border-bottom: 2px solid #7ff815;
+}
+
     /* Reduz o tamanho da logo */
     .logo {
         width: 80px;
     }
+}
+
+/* mudar a cor quando seleciona texto */
+::selection {
+    background: #7ff815;
+    color: #000;
+    text-shadow: none;
 }

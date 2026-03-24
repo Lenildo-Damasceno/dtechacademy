@@ -11,6 +11,8 @@
     <title>D tech academy - Inicio</title>
 </head>
 <body>
+
+
     <!-- HEADER: cabecalho da pagina com logo, contatos e menu de navegacao. -->
     <header class="header">
         <div class="promo-banner">Semana do Consumidor <button class="matricule-se-btn">Matricule-se</button></div>
@@ -24,6 +26,7 @@
                     <li><a href="pages/secretaria-virtual.html">Secretaria Virtual</a></li>
                 </ul>
             </nav>
+            <div class="header-content"></div>
         </div>
     </header>
 
@@ -47,9 +50,10 @@
         </section>
         <section>
             <h2>Depoimentos</h2>
-            <article>
-                <h5>Julio Cesar</h5>
+            <article> 
+                  <p id="par1">Julio Cesar</p> 
                 <p>O curso de Desenvolvimento Web Full Stack me ajudou a conseguir um emprego na area!</p>
+                
             </article>
 
         </section>
@@ -150,5 +154,15 @@
             <a href="https://wa.me/5584998765432" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </div>
     </footer>
+    <script>
+    const links = document.querySelectorAll("nav a");
+    const urlAtual = window.location.pathname;
+
+    links.forEach(link => {
+        if (link.getAttribute("href") === urlAtual.split("/").pop()) {
+            link.classList.add("ativo");
+        }
+    });
+</script>
 </body>
 </html>
