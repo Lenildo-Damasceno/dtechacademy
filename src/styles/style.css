@@ -25,7 +25,7 @@
    Estilos base da página inteira
    ================================ */
 body {
-    font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte do sistema com fallbacks */
+    font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; /* Fonte do sistema com fallbacks */
     color: var(--color-text);                /* Cor padrão do texto: branco */
     background: var(--color-primary);        /* Cor de fundo da página: primária (preto/azul escuro) */
     min-height: 100vh;          /* Garante que a página ocupe no mínimo 100% da altura da tela */
@@ -149,7 +149,7 @@ nav :is(a, button):hover {
 /* Destaca a página atual no menu com o roxo da identidade visual */
 nav a.ativo,
 nav a[aria-current="page"] {
-    color: var(--color-accent-purple);
+    color: var(--color-accent-purple)!important;
     font-weight: 700;
 }
 
