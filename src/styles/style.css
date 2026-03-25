@@ -8,18 +8,30 @@
     box-sizing: border-box;     /* Faz padding e border não aumentarem o tamanho do elemento */
 }
 
+/* Variáveis de tema -- cores primária/secundária e variações */
+:root {
+    --color-primary: #060429;         /* preto quase azul escuro (fundo principal) */
+    --color-header-green: #19f575;    /* verde do cabeçario (banner) */
+    --color-accent-purple: #cb15ce;   /* roxo de destaque (botão) */
+    --color-accent-lime: #7ff815;     /* verde-limão (hover / destaques) */
+    --color-text: #ffffff;            /* cor do texto */
+    --color-header-bg: #000000;       /* fundo do header */
+    --color-header-green-dark: #066f14; /* variante escura do verde (hover botão) */
+    --color-footer-bg: #0d0d1a;       /* fundo do footer */
+}
+
 /* ================================
    BODY
    Estilos base da página inteira
    ================================ */
 body {
     font-family: system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte do sistema com fallbacks */
-    color: #fff;                /* Cor padrão do texto: branco */
-    background: #060429;        /* Cor de fundo da página: azul escuro */
+    color: var(--color-text);                /* Cor padrão do texto: branco */
+    background: var(--color-primary);        /* Cor de fundo da página: primária (preto/azul escuro) */
     min-height: 100vh;          /* Garante que a página ocupe no mínimo 100% da altura da tela */
     line-height: 1.6;           /* Espaçamento entre linhas para melhor leitura */
     padding-top: 160px;         /* Empurra todo o conteúdo para baixo do header fixo (banner + header-row) */
-    padding-bottom: 70px;        /* Empurra o conteúdo para cima do footer fixo */
+    padding-bottom: 70px;       /* Empurra o conteúdo para cima do footer fixo */
 }
 
 /* ================================
@@ -27,11 +39,11 @@ body {
    Faixa verde no topo do header
    ================================ */
 .promo-banner {
-    background: #19f575;                /* Cor de fundo verde */
-    color: #000;                        /* Cor do texto: preto */
-    padding: 1rem;                      /* Espaçamento interno */
-    text-align: center;                 /* Centraliza o texto */
-    border-radius: 0 0 1rem 1rem;       /* Arredonda apenas os cantos inferiores */
+    background: var(--color-header-green);  /* usa verde do cabeçario */
+    color: #000;                            /* Cor do texto no banner */
+    padding: 1rem;                          /* Espaçamento interno */
+    text-align: center;                     /* Centraliza o texto */
+    border-radius: 0 0 1rem 1rem;           /* Arredonda apenas os cantos inferiores */
 }
 
 /* ================================
@@ -39,19 +51,19 @@ body {
    Botão dentro do banner promocional
    ================================ */
 .matricule-se-btn {
-    background-color: #cb15ce;  /* Cor de fundo: roxo/magenta */
-    color: #fff;                /* Cor do texto: branco */
-    padding: 0.5rem 1.5rem;     /* Espaçamento interno: vertical e horizontal */
-    border: none;               /* Remove borda padrão do botão */
-    border-radius: 0.5rem;      /* Arredonda os cantos */
-    font-weight: bold;          /* Texto em negrito */
-    transition: background 0.3s;/* Transição suave da cor ao passar o mouse */
-    cursor: pointer;            /* Cursor de mão ao passar sobre o botão */
+    background-color: var(--color-accent-purple);  /* roxo/magenta via variável */
+    color: var(--color-text);                      /* Cor do texto */
+    padding: 0.5rem 1.5rem;     
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: background 0.3s;
+    cursor: pointer;
 }
 
 /* Efeito ao passar o mouse no botão */
 .matricule-se-btn:hover {
-    background-color: #066f14;  /* Muda para verde escuro no hover */
+    background-color: var(--color-header-green-dark); /* hover: verde escuro */
 }
 
 /* ================================
@@ -64,8 +76,8 @@ body {
     left: 0;                    /* Alinha à esquerda */
     width: 100%;                /* Ocupa toda a largura */
     z-index: 1000;              /* Fica acima de todos os outros elementos */
-    background: #000;           /* Fundo preto para cobrir o conteúdo ao rolar */
-    color: #fff;                /* Cor do texto: branco */
+    background: var(--color-header-bg); /* Fundo do header via variável */
+    color: var(--color-text);           /* Cor do texto */
 }
 
 /* ================================
@@ -111,7 +123,6 @@ nav ul {
     margin: 0;              /* Remove margem padrão */
 }
 
-
 /* Links do menu */
 nav a {
     color: #fff;                /* Cor do texto: branco */
@@ -131,14 +142,14 @@ nav :is(a, button) {
 
 /* Cor de destaque e leve zoom ao passar o mouse nos itens do menu */
 nav :is(a, button):hover {
-    color: #7ff815;
+    color: var(--color-accent-lime) !important;
     transform: scale(1.08);
 }
 
 /* Destaca a página atual no menu com o roxo da identidade visual */
 nav a.ativo,
 nav a[aria-current="page"] {
-    color: #cb15ce;
+    color: var(--color-accent-purple);
     font-weight: 700;
 }
 
@@ -174,20 +185,20 @@ main {
    Fixo na parte inferior da página
    ================================ */
 footer {
-    background: #0d0d1a;            /* Fundo azul muito escuro */
-    color: #7ff815;                 /* Cor do texto: verde limão */
-    padding: 20px;                  /* Espaçamento interno */
-    font-size: 0.85rem;             /* Fonte levemente menor */
-    display: flex;                  /* Layout em flexbox */
-    justify-content: space-between; /* Direitos reservados à esquerda, redes sociais à direita */
-    align-items: center;            /* Alinha itens verticalmente ao centro */
-    flex-wrap: wrap;                /* Quebra linha em telas pequenas */
-    gap: 10px;                      /* Espaço entre itens ao quebrar linha */
-    position: fixed;                /* Fixa o footer na parte inferior */
-    bottom: 0;                      /* Cola no rodapé da tela */
-    left: 0;                        /* Alinha à esquerda */
-    right: 0;                       /* Alinha à direita */
-    z-index: 1000;                  /* Fica acima do conteúdo ao rolar */
+    background: var(--color-footer-bg);  /* fundo do footer via variável */
+    color: var(--color-accent-lime);     /* texto do footer usa destaque */
+    padding: 20px;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 /* Links do rodapé */
@@ -240,7 +251,7 @@ footer a:hover {
 
 /* mudar a cor quando seleciona texto */
 ::selection {
-    background: #7ff815;
+    background: var(--color-accent-lime);
     color: #000;
     text-shadow: none;
 }
